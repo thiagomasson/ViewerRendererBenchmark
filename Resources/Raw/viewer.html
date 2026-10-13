@@ -1,0 +1,46 @@
+<!doctype html>
+<html><head><meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+<style>
+html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#000}
+img{position:absolute;left:50%;top:50%;transform-origin:center;will-change:transform;max-width:none;max-height:none}
+</style></head><body><img id="image" alt="">
+<script>
+const image=document.getElementById('image');
+let originalWidth=1,originalHeight=1,fit=1,generation=0;
+let state={loaded:false,done:false,error:null,intervals:[],width:0,height:0,dpr:devicePixelRatio,userAgent:navigator.userAgent};
+function transform(zoom,x,y){
+ image.style.transform=`translate(-50%,-50%) translate(${x}px,${y}px) scale(${zoom})`;
+ image.style.imageRendering=fit*zoom*devicePixelRatio>=2?'pixelated':'auto';
+}
+window.rendererBench={
+ load(url){
+  const current=++generation;state.loaded=false;state.error=null;
+  image.onload=async()=>{
+   try{
+    await image.decode();if(current!==generation)return;
+    originalWidth=image.naturalWidth;originalHeight=image.naturalHeight;
+    fit=Math.min(innerWidth/originalWidth,innerHeight/originalHeight);
+    image.style.width=originalWidth*fit+'px';image.style.height=originalHeight*fit+'px';
+    transform(1,0,0);state.width=originalWidth;state.height=originalHeight;state.loaded=true;
+   }catch(error){state.error=String(error)}
+  };
+  image.onerror=()=>{state.error='Image loading failed'};image.src=url;return true;
+ },
+ motion(stage,count){
+  const current=generation;state.done=false;state.intervals=[];
+  let frame=0,last=null;
+  function tick(now){
+   if(current!==generation)return;
+   if(last===null){last=now;requestAnimationFrame(tick);return}
+   state.intervals.push(now-last);last=now;
+   const t=frame*.08,zoom=stage==='zoom-pan'?2.4+.6*Math.sin(t):1.04+.04*Math.sin(t);
+   const x=stage==='zoom-pan'?innerWidth*.12*Math.sin(t*.7):0;
+   const y=stage==='zoom-pan'?innerHeight*.08*Math.cos(t*.9):0;
+   transform(zoom,x,y);if(++frame<count)requestAnimationFrame(tick);else state.done=true;
+  }
+  requestAnimationFrame(tick);return true;
+ },
+ reset(){generation++;image.removeAttribute('src');state.loaded=false;state.done=false;state.error=null;return true},
+ state(){return state}
+};
+</script></body></html>

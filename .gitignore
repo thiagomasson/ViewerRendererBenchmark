@@ -1,0 +1,6 @@
+results/**/*.log
+bin/
+obj/
+.vs/
+.dotnet/
+*.user

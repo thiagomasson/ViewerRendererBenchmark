@@ -1,0 +1,101 @@
+{
+  "Application": "Renderer Benchmark",
+  "Sources": [
+    {
+      "Path": "WebViewer.cs",
+      "SHA256": "F0F4DD3092DCDC8B7A680BF7FA60F66C8584BA05FD2FE896C228A814677EC781"
+    },
+    {
+      "Path": "ViewerRenderer.csproj",
+      "SHA256": "4EDC2E6B8B55807290EB90B27E1E85B42E348974F5BCEDA8D6E1A697A2284BB7"
+    },
+    {
+      "Path": "Skia\\ViewerImageSource.Skia.cs",
+      "SHA256": "7118AB2321465386D075E8374B97DDF05A3F96BE426041564D22E6908E039443"
+    },
+    {
+      "Path": "Skia\\ViewerDecodedImage.cs",
+      "SHA256": "4FD5895B7F4D9A003F2A63F3E4914FB76B745B30D14E34E4CD12134F66D413E1"
+    },
+    {
+      "Path": "Skia\\SkiaViewerImageSourceService.cs",
+      "SHA256": "AB37B603DF68763FEC5C649B48468D013A83B09CA15AEE2E91667F0707BD2EF0"
+    },
+    {
+      "Path": "Skia\\GpuViewerImageView.cs",
+      "SHA256": "BC7C9811BF3155D70A673DC5EBA43D7ADA2C418FB526D2B957895098792FCFD7"
+    },
+    {
+      "Path": "Services\\ViewerImageSourceService.cs",
+      "SHA256": "8A20AA8E7163FDA4BFEA22B48FBF99AC18DC7F728F81AF5D7CA424D65F6F79F3"
+    },
+    {
+      "Path": "FrameClock.cs",
+      "SHA256": "07E3FCE244CB42208B96BAF13649AD8B5004326F534A0E440E925E134FDD77E3"
+    },
+    {
+      "Path": "CpuViewerImageView.cs",
+      "SHA256": "F96EB4589B940CACF22BB915D04C98DED779DBD4DFD34A0FFB6B3629402428CF"
+    },
+    {
+      "Path": "BenchmarkFixtures.cs",
+      "SHA256": "ACB23E48D191AB2684359AC08F1F93B5AEDE5CDD29BC2A1D5218EBA000888253"
+    },
+    {
+      "Path": "BenchmarkPage.cs",
+      "SHA256": "F315AE9A911ABFC6CEC44E2C2EBADF89817030BBA4D999AC0EA346C8C9FCBD6C"
+    },
+    {
+      "Path": "MauiProgram.cs",
+      "SHA256": "322B9890AEDE10B13F8BBC869C1BC7577C4FF37AC696ECCAA7BAE63DF90AB172"
+    },
+    {
+      "Path": "Infrastructure\\ViewerImageSource.cs",
+      "SHA256": "1FDC824FF328D02B8A8A6AD788A144695301A2D8FA2658C1667FAFB55AD40DE2"
+    },
+    {
+      "Path": "Infrastructure\\ViewerImageSizing.cs",
+      "SHA256": "8E5B29E24A5BF188562B17F25E81DE87E35B1F70D8B14E1609EE3B724D6E7DA2"
+    },
+    {
+      "Path": "Platforms\\Windows\\ViewerImageSourceService.cs",
+      "SHA256": "2455CD4B94132A64260764C7EFCC583034EBAE31C065E1F55C14F5DEFF12C20F"
+    },
+    {
+      "Path": "Platforms\\Windows\\SkiaViewerImageSourceService.cs",
+      "SHA256": "096F62EF64A35784E1D300FD9B175E78F5E8C60ED88C6991F3F63AA3BDC89533"
+    },
+    {
+      "Path": "Platforms\\Windows\\FrameClock.cs",
+      "SHA256": "BFDA2DC8004C64E8181EE2A4B84BFF635472C54985D0529CC880F65868089334"
+    },
+    {
+      "Path": "Platforms\\Windows\\App.xaml.cs",
+      "SHA256": "5DF5FA2BB98C1D34AF9CAE016E3905D9A36D4A41918F891999FB89D052A4FD76"
+    },
+    {
+      "Path": "Resources\\Raw\\viewer.html",
+      "SHA256": "7C412D167A0D8C11CD672FC7C9AD6FCD65AAF71D302E26C3DA6703BEBB290291"
+    },
+    {
+      "Path": "Platforms\\Android\\ViewerImageSourceService.cs",
+      "SHA256": "EC7E2F5C1EE8E58F1F241A5C4212C16D5CAC3E0B25A24AF657ACE29E80DFF8A9"
+    },
+    {
+      "Path": "Platforms\\Android\\SkiaViewerImageSourceService.cs",
+      "SHA256": "B62F6EA8A491CD49DF8951226B6D7ADB08F143D1E9A541C58D9C05F5AB097019"
+    },
+    {
+      "Path": "Platforms\\Android\\MainApplication.cs",
+      "SHA256": "E88DB19F249A083EF217AB30191F29B015932DF6B8AD24E5F4D888F22AD51787"
+    },
+    {
+      "Path": "Platforms\\Android\\MainActivity.cs",
+      "SHA256": "F0DACD28F04408DB06CBF3DCAD824EFCD7713245AAB9451C718E359372DE0E36"
+    },
+    {
+      "Path": "Platforms\\Android\\FrameClock.cs",
+      "SHA256": "DC155A0D52203129938EBA32A593D252CC742737243CE460B43787ED7459BF3D"
+    }
+  ]
+}
